@@ -1,4 +1,4 @@
-:root{
+:root {
     --colorPrimario: #90c322;
     --colorSecundario: #555555;
     --blanco: #ffffff;
@@ -7,34 +7,46 @@
     --FuenteSecundaria: Verdana, Geneva, Tahoma, sans-serif;
 
 }
-body{
+
+body {
     padding: 0;
     margin: 0;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
+
 @font-face {
     font-family: 'bebas';
     src: url(./fuentes/bebas_neue/BebasNeue-Regular.woff2);
 }
-a{
+
+a {
     color: var(--blanco);
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-h1{
+
+h1 {
     font-family: var(--FuentePrimaria);
     font-size: 35px;
 }
-h3{
+h2{
+    font-family: var(--FuentePrimaria);
+    text-transform: uppercase;
+}
+
+h3 {
     font-family: var(--FuenteSecundaria);
     font-size: 28px;
 }
-.header_verde{
+
+.header_verde {
     display: flex;
     background-color: var(--colorPrimario);
     width: 100%;
@@ -43,21 +55,25 @@ h3{
     padding-bottom: 10px;
     padding-top: 10px;
 }
-.header_verde .contenido{
+
+.header_verde .contenido {
     width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.col1{
+
+.col1 {
     display: flex;
     gap: 20px;
 }
-.col2{
+
+.col2 {
     display: flex;
     gap: 20px;
 }
-.header_blanco{
+
+.header_blanco {
     display: flex;
     width: 70%;
     margin: 0 auto;
@@ -65,24 +81,29 @@ h3{
     padding-top: 20px;
     padding-bottom: 10px;
 }
-.columna2_headerBlanco{
+
+.columna2_headerBlanco {
     display: flex;
     gap: 10px;
 }
-input{
+
+input {
     padding-bottom: 18px;
     border: solid 1px gray;
 }
-.boton_header{
+
+.boton_header {
     background-color: var(--colorPrimario);
     padding: 4px;
     border: solid var(--colorPrimario);
 }
-.boton_header img{
+
+.boton_header img {
     width: 80%;
     margin: 0 auto;
 }
-.header_negro{
+
+.header_negro {
     background-color: var(--colorSecundario);
     color: var(--blanco);
     text-transform: uppercase;
@@ -92,7 +113,8 @@ input{
     padding-left: 285px;
     padding-right: 285px;
 }
-li{
+
+li {
     padding: 21px 15px;
     border: solid 1px grey;
     padding-top: 20px;
@@ -101,46 +123,51 @@ li{
     font-size: 22px;
 }
 
-ul{
+ul {
     display: flex;
 }
 
-.contenedor_img{
+.contenedor_img {
     width: 100%;
     position: relative;
     z-index: 0;
     height: auto;
 }
+
 .contenedor_img img {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
-.parte_abajo{
+
+.parte_abajo {
     display: flex;
     width: 100%;
     margin: 0 auto;
     position: absolute;
     z-index: 99;
-    bottom:0;
+    bottom: 0;
     height: 100%;
-    
+
 }
-.parteBoton{
+
+.parteBoton {
     width: 33.3%;
     display: flex;
     text-align: center;
     align-items: end;
 }
-.contenedor_caja{
+
+.contenedor_caja {
     width: 33.3%;
     height: 100%;
     display: flex;
-    justify-content: center;   
+    justify-content: center;
     align-items: end;
-      
+
 
 }
+
 .caja_imagen {
     width: 50%;
     text-align: center;
@@ -151,16 +178,18 @@ ul{
     padding-bottom: 20px;
     border-radius: 5px;
 }
-.boton_img_verde{
-    padding-right:60px;
-    padding-left:60px;
+
+.boton_img_verde {
+    padding-right: 60px;
+    padding-left: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--colorPrimario);
     border: solid var(--colorPrimario);
     opacity: 0.7;
 }
-.Categorias{
+
+.Categorias {
     position: relative;
     z-index: 0;
     padding-top: 40px;
@@ -168,31 +197,70 @@ ul{
     margin: 0 auto;
     display: flex;
     gap: 40px;
-    
-   
+    padding-bottom: 20px;
+
 }
-.botonesCat{
-    position: fixed;
-    z-index: 98;
-    gap: 40px;
+
+
+.catItem {
+    width: 33.3%;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.botonCat {
+    position: absolute;
+    bottom: 4px;
+    /* Ajusta para mover el botón hacia arriba o abajo */
+    right: 40%;
+    z-index: 99;
+    background-color: var(--colorPrimario);
+    color: var(--blanco);
+    border: none;
+    padding: 12px 24px;
+    font-family: 'bebas';
+    font-size: 18px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 133px;
+}
+
+.imagenCat {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 5;
+}
+.section_featured{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border: solid 1px gray;
+    padding: 10px;
+}
+.botones_featured{
+    display: flex;
+    gap: 10px;
+}
+.elementos{
     width: 70%;
     margin: 0 auto;
     display: flex;
-    bottom: 0;
-    left: 320px;
-    align-items: flex-end;
-    height: 100vh;
-}
-.botonesCat button{
-    background-color: var(--colorPrimario);
-    color: var(--blanco);
-    border: solid var(--colorPrimario);
-    padding: 20px;
-    opacity: 0.8;
-    text-transform: uppercase;
-    font-family: 'bebas';
-    font-size: 20px;
-    height: auto;
-}
+    gap: 20px;
 
+}
 
